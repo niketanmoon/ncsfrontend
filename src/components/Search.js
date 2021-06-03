@@ -12,13 +12,16 @@ const Search = () => {
     e.preventDefault();
   };
 
+  const handleOnChange = (e) => {
+    e.preventDefault();
+    setSearchText(e.target.value);
+    if (searchText.length > 1) {
+      dispatch(saveMovieList(searchText));
+    }
+  };
   return (
     <div className="search">
-      <input
-        type="text"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-      />
+      <input type="text" value={searchText} onChange={handleOnChange} />
       <button onClick={handleSearch}>Search</button>
     </div>
   );

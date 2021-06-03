@@ -9,7 +9,9 @@ const movieSlice = createSlice({
   initialState,
   reducers: {
     saveMovieList: (state, action) => {
-      state.moviesList.push(action.payload);
+      state.moviesList.filter((f) =>
+        f.title.toLowerCase().includes(action.payload.toLowerCase())
+      );
     },
   },
 });
