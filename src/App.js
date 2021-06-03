@@ -20,7 +20,9 @@ function App() {
                 a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
               )
               .map((item, i) => (
-                <MovieItem item={item} />
+                <Col xs="3">
+                  <MovieItem item={item} />
+                </Col>
               ))}
           </Row>
         </div>

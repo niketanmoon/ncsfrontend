@@ -13,23 +13,19 @@ import {
 const MovieItem = ({ item }) => {
   console.log(item.images["Poster Art"].url);
   return (
-    <div className="movieItem">
-      <Col xs="3">
-        <Card className="card-style">
-          <CardImg
-            top
-            width="30%"
-            src={item.images["Poster Art"].url}
-            alt="Card image cap"
-          />
-          <CardBody>
-            <CardTitle>{item.title}</CardTitle>
-            <CardSubtitle>${item.releaseYear}</CardSubtitle>
-            <CardText>{item.description}</CardText>
-          </CardBody>
-        </Card>
-      </Col>
-    </div>
+    <Card className="card-style">
+      <CardImg
+        top
+        width="30%"
+        src={item.images["Poster Art"].url}
+        alt="Card image cap"
+      />
+      <CardBody>
+        <CardTitle>{item.title}</CardTitle>
+        <CardSubtitle>${item.releaseYear}</CardSubtitle>
+        <CardText>{item.description}</CardText>
+      </CardBody>
+    </Card>
   );
 };
 
